@@ -3,6 +3,7 @@ from copy import deepcopy
 import heapq
 import Parser
 import time
+from decimal import *
 
 
 class Puzzle:
@@ -153,7 +154,6 @@ class Puzzle:
             state = states.pop(0)
             if state.depth > recursion:
                 recursion = state.depth
-            print(states_visited, recursion)
             if state.is_goal_state():
                 return len(state.path), state.path, states_visited, processed, recursion
             if state.depth < recursion_depth:
@@ -255,5 +255,5 @@ if __name__ == "__main__":
     f.write(str(visited)+"\n")
     f.write(str(processed)+"\n")
     f.write(str(recursed)+"\n")
-    f.write(str(time))
+    f.write(str(round(time,3)))
     f.close()
