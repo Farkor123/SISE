@@ -140,7 +140,7 @@ class Puzzle:
                 x = state.generate_new_states(priority)
                 states.extend(x)
                 processed += len(x)
-        return -1
+        return -1, [], states_visited, processed, recursion
 
     def solve_dfs(self, priority, recursion_depth):
         # solves puzzle with depth-first-search
@@ -160,7 +160,7 @@ class Puzzle:
                 x = state.generate_new_states(priority)
                 states = x + states
                 processed += len(x)
-        return -1
+        return -1, [], states_visited, processed, recursion
 
     def hamming_metric(self):
         misplaced = 0
@@ -206,7 +206,7 @@ class Puzzle:
                         i.manhattan_metric()
                     processed += 1
                     heapq.heappush(states, i)
-            return -1
+        return -1, [], states_visited, processed, recursion
 
 
 if __name__ == "__main__":
