@@ -5,6 +5,7 @@ import Parser
 import time
 from decimal import *
 
+recursion_depth=20
 
 class Puzzle:
     # current board state
@@ -184,11 +185,12 @@ class Puzzle:
                     distance += abs(h-int((x-1)/self.width)) + abs(w-((x-1)%self.width))
         self.distance = distance
 
-    def solve_astr(self, metric, priority, recursion_depth):
+    def solve_astr(self, metric, recursion_depth):
         states = []
         states_visited = 0
         recursion = 0
         processed = 1
+        priority = ['U', 'L', 'D', 'R']
         heapq.heappush(states, self)
         while len(states) > 0:
             states_visited += 1
@@ -214,28 +216,28 @@ if __name__ == "__main__":
     P.parse()
     input_path = P.get_input()
     solution = P.get_solution()
-    more = P.get_more_info()
+    more = P.get_stats()
     priority = P.get_priority()
-    recursion_depth = P.get_recursion_depth()
     algorithm = P.get_algorithm()
 
     p1 = Puzzle(input_path)
 
     if algorithm == 'bfs':
+        priority1 = []
+        for p in priority:
+            priority1.append(p)
         start_time = time.time()
-        amount, path, visited, processed, recursed = p1.solve_bfs(priority, recursion_depth)
+        amount, path, visited, processed, recursed = p1.solve_bfs(priority1, recursion_depth)
         time = time.time() - start_time
     elif algorithm == 'dfs':
+        for p in priority:
+            priority1.append(p)
         start_time = time.time()
         amount, path, visited, processed, recursed = p1.solve_dfs(priority, recursion_depth)
         time = time.time() - start_time
-    elif algorithm == 'hamm':
+    elif algorithm == 'astr':
         start_time = time.time()
-        amount, path, visited, processed, recursed = p1.solve_astr(algorithm, priority, recursion_depth)
-        time = time.time() - start_time
-    else:
-        start_time = time.time()
-        amount, path, visited, processed, recursed = p1.solve_astr(algorithm, priority, recursion_depth)
+        amount, path, visited, processed, recursed = p1.solve_astr(priority, recursion_depth)
         time = time.time() - start_time
 
     f = open(solution, 'x')
