@@ -126,42 +126,50 @@ class Puzzle:
     def solve_bfs(self, priority, recursion_depth):
         # solves puzzle with breadth-first-sarch
         start_state = Puzzle(self)
-        states_visited = 0
+        visited = 0
         states = [start_state]
         recursion = 1
-        processed = 1
+        processed = 0
         while len(states) > 0:
-            states_visited += 1
+            processed += 1
             state = states.pop(0)
             if state.depth > recursion:
                 recursion = state.depth
             if state.is_goal_state():
-                return len(state.path), state.path, states_visited, processed, recursion
+                return len(state.path), state.path, visited, processed, recursion
             if state.depth < recursion_depth:
                 x = state.generate_new_states(priority)
+                for i in x:
+                    if i.path in [y.path for y in states]:
+                        x.remove(i)
+                    if i.is_goal_state():
+                        return len(i.path), i.path, visited, processed, recursion
+                    visited += 1
                 states.extend(x)
-                processed += len(x)
-        return -1, [], states_visited, processed, recursion
+        return -1, [], visited, processed, recursion
 
     def solve_dfs(self, priority, recursion_depth):
         # solves puzzle with depth-first-search
         start_state = Puzzle(self)
-        states_visited = 0
+        visited = 0
         states = [start_state]
         recursion = 0
-        processed = 1
+        processed = 0
         while len(states) > 0:
-            states_visited += 1
+            processed += 1
             state = states.pop(0)
             if state.depth > recursion:
                 recursion = state.depth
-            if state.is_goal_state():
-                return len(state.path), state.path, states_visited, processed, recursion
             if state.depth < recursion_depth:
                 x = state.generate_new_states(priority)
+                for i in x:
+                    if i.path in [y.path for y in states]:
+                        x.remove(i)
+                    if i.is_goal_state():
+                        return len(i.path), i.path, visited, processed, recursion
+                    visited += 1
                 states = x + states
-                processed += len(x)
-        return -1, [], states_visited, processed, recursion
+        return -1, [], visited, processed, recursion
 
     def hamming_metric(self):
         misplaced = 0
@@ -187,28 +195,28 @@ class Puzzle:
 
     def solve_astr(self, metric, recursion_depth):
         states = []
-        states_visited = 0
+        visited = 0
         recursion = 0
-        processed = 1
+        processed = 0
         priority = ['U', 'L', 'D', 'R']
         heapq.heappush(states, self)
         while len(states) > 0:
-            states_visited += 1
+            processed += 1
             state = heapq.heappop(states)
-            if state.is_goal_state():
-                return len(state.path), state.path, states_visited, processed, recursion
             if state.depth < recursion_depth:
                 x = state.generate_new_states(priority)
                 for i in x:
                     if i.depth > recursion:
                         recursion = i.depth
+                    if i.is_goal_state():
+                        return len(i.path), i.path, visited, processed, recursion
                     if metric == "hamm":
                         i.hamming_metric()
                     else:
                         i.manhattan_metric()
-                    processed += 1
+                    visited += 1
                     heapq.heappush(states, i)
-        return -1, [], states_visited, processed, recursion
+        return -1, [], visited, processed, recursion
 
 
 if __name__ == "__main__":
@@ -230,10 +238,11 @@ if __name__ == "__main__":
         amount, path, visited, processed, recursed = p1.solve_bfs(priority1, recursion_depth)
         time = time.time() - start_time
     elif algorithm == 'dfs':
+        priority1 = []
         for p in priority:
             priority1.append(p)
         start_time = time.time()
-        amount, path, visited, processed, recursed = p1.solve_dfs(priority, recursion_depth)
+        amount, path, visited, processed, recursed = p1.solve_dfs(priority1, recursion_depth)
         time = time.time() - start_time
     elif algorithm == 'astr':
         start_time = time.time()
