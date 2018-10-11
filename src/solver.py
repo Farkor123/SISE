@@ -188,9 +188,8 @@ class Puzzle:
             for w in range(self.width):
                 x = self.board[h][w]
                 if x == 0:
-                    distance += int(abs(h - self.height-1) + abs(w - self.width-1))
-                else:
-                    distance += abs(h-int((x-1)/self.width)) + abs(w-((x-1)%self.width))
+                    pass
+                distance += abs(h-int((x-1)/self.width)) + abs(w-((x-1)%self.width))
         self.distance = distance
 
     def solve_astr(self, metric, recursion_depth):
