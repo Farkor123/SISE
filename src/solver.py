@@ -59,6 +59,12 @@ class Puzzle:
     def __ge__(self, other):
         return self.distance >= other.distance
 
+    def __str__(self):
+        return str(self.board)
+
+    def __hash__(self):
+        return hash(str(self))
+
     def get_zero_pos(self):
         # get position of zero in given state
         for h in range(self.height):
@@ -127,12 +133,13 @@ class Puzzle:
         # solves puzzle with breadth-first-sarch
         start_state = Puzzle(self)
         visited = 0
-        states = [start_state]
+        frontier = [start_state]
+        exfrontier = set()
         recursion = 1
         processed = 0
-        while len(states) > 0:
+        while len(frontier) > 0:
             processed += 1
-            state = states.pop(0)
+            state = frontier.pop(0)
             if state.depth > recursion:
                 recursion = state.depth
             if state.is_goal_state():
@@ -140,35 +147,38 @@ class Puzzle:
             if state.depth < recursion_depth:
                 x = state.generate_new_states(priority)
                 for i in x:
-                    if i.path in [y.path for y in states]:
+                    if i in exfrontier:
                         x.remove(i)
                     if i.is_goal_state():
                         return len(i.path), i.path, visited, processed, recursion
+                    exfrontier.add(i)
                     visited += 1
-                states.extend(x)
+                frontier.extend(x)
         return -1, [], visited, processed, recursion
 
     def solve_dfs(self, priority, recursion_depth):
         # solves puzzle with depth-first-search
         start_state = Puzzle(self)
         visited = 0
-        states = [start_state]
+        frontier = [start_state]
+        exfrontier = set()
         recursion = 0
         processed = 0
-        while len(states) > 0:
+        while len(frontier) > 0:
             processed += 1
-            state = states.pop(0)
+            state = frontier.pop(0)
             if state.depth > recursion:
                 recursion = state.depth
             if state.depth < recursion_depth:
                 x = state.generate_new_states(priority)
                 for i in x:
-                    if i.path in [y.path for y in states]:
+                    if i in exfrontier:
                         x.remove(i)
                     if i.is_goal_state():
                         return len(i.path), i.path, visited, processed, recursion
                     visited += 1
-                states = x + states
+                    exfrontier.add(i)
+                frontier = x + frontier
         return -1, [], visited, processed, recursion
 
     def hamming_metric(self):
