@@ -11,6 +11,7 @@
 \usepackage{fontawesome}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{geometry}
 \usepackage{caption}
 \usepackage{subcaption}
 \captionsetup{compatibility=false}
@@ -145,10 +146,10 @@ cel konkretnego testu. Najlepiej byłoby wyraźnie wyszczególnić (ponumerować
 poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.}
 
 \section{Wyniki}
-
+\newgeometry{left=1cm,right=0.1cm,bottom=4cm}
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[t]{0.2\textlength}
+    \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\textwidth]{charts/ALL_path_length.png}
         \caption{Średnia długość rozwiązania}
         \label{ALL:path_length}
@@ -178,7 +179,7 @@ poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.
         \caption{Średnia ilość odwiedzonych stanów}
         \label{ALL:visited}
     \end{subfigure}
-    \caption{Porównanie wszystkich metod przeszukiwania}\label{fig:animals}
+    \caption{Porównanie wszystkich metod przeszukiwania}\label{col:all}
 \end{figure}
 
 \begin{figure}[H]
@@ -213,43 +214,60 @@ poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.
         \caption{Średnia ilość odwiedzonych stanów}
         \label{ASTR:visited}
     \end{subfigure}
-    \caption{Porównanie wszystkich metod przeszukiwania}\label{fig:animals}
+    \caption{Porównanie wszystkich metod przeszukiwania}\label{coll:astr}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \begin{subfigure}[t]{0.8\textwidth}
-        \includegraphics[width=\textwidth]{charts/BFS_path_length.png}
-        \caption{Średnia długość rozwiązania}
-        \label{BFS:path_length}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-      %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[t]{0.8\textwidth}
-        \includegraphics[width=\textwidth]{charts/BFS_processed.png}
-        \caption{Średnia ilość przetworzonych stanów}
-        \label{BFS:processed}
-    \end{subfigure}
-    \qquad
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-    %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[t]{\textwidth}
-        \includegraphics[width=\textwidth]{charts/BFS_recursed.png}
-        \caption{Średnia maksymalna głębokość rekursji}
-        \label{BFS:rescursed}
-    \end{subfigure}
-    \begin{subfigure}[t]{\textwidth}
-        \includegraphics[width=\textwidth]{charts/BFS_time.png}
-        \caption{Średni czas przetwarzania}
-        \label{BFS:time}
-    \end{subfigure}
-    \begin{subfigure}[t]{\textwidth}
-        \includegraphics[width=\textwidth]{charts/BFS_visited.png}
-        \caption{Średnia ilość odwiedzonych stanów}
-        \label{BFS:visited}
-    \end{subfigure}
-    \caption{Porównanie wszystkich metod przeszukiwania}\label{fig:animals}
+    \includegraphics[width=\textwidth]{charts/BFS_path_length.png}
+    \caption{BFS -- Średnia długość rozwiązania}
+    \label{BFS:path_length}
+    \vspace{0.2cm}
+    \includegraphics[width=\textwidth]{charts/BFS_processed.png}
+    \caption{BFS -- Średnia ilość przetworzonych stanów}
+    \label{BFS:processed}
+    \vspace{0.2cm}
+    \includegraphics[width=\textwidth]{charts/BFS_recursed.png}
+    \caption{BFS --  Średnia maksymalna głębokość rekursji}
+    \label{BFS:time}
+
 \end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{charts/BFS_time.png}
+    \caption{BFS -- Średni czas przetwarzania}
+    \label{BFS:time}
+    \includegraphics[width=\textwidth]{charts/BFS_visited.png}
+    \caption{BFS -- ŚŚrednia ilość odwiedzonych stanów}
+    \label{BFS:time}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{charts/DFS_path_length.png}
+    \caption{DFS -- Średnia długość rozwiązania}
+    \label{DFS:path_length}
+    \vspace{0.2cm}
+    \includegraphics[width=\textwidth]{charts/DFS_processed.png}
+    \caption{DFS -- Średnia ilość przetworzonych stanów}
+    \label{DFS:processed}
+    \vspace{0.2cm}
+    \includegraphics[width=\textwidth]{charts/DFS_recursed.png}
+    \caption{DFS --  Średnia maksymalna głębokość rekursji}
+    \label{DFS:time}
+
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{charts/DFS_time.png}
+    \caption{DFS -- Średni czas przetwarzania}
+    \label{DFS:time}
+    \includegraphics[width=\textwidth]{charts/DFS_visited.png}
+    \caption{DFS -- ŚŚrednia ilość odwiedzonych stanów}
+    \label{DFS:time}
+\end{figure}
+
+
+
+\restoregeometry
 
 \section{Dyskusja}
 {\color{blue}
