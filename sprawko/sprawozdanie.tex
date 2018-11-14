@@ -41,12 +41,12 @@
 
 
 \section{Cel}
-Implementacja kilku algorytmów rozwiązywania gry logicznej "Piętnastki" i analiza ich efektywności.
+Implementacja kilku algorytmów przeszukiwania przestrzeni stanów oraz rozwiązanie i analiza wyników zadanych stanów układanki "piętnastka". 
 
 \section{Wprowadzenie}
 \subsection{Piętnastka}
-\begin{table}[h!]
-    \begin{minipage}{0.5\textwidth}
+\begin{table}[H]
+    \begin{minipage}[t]{0.5\textwidth}
         \centering
         \begin{tabular}{|l|l|l|l|}
             \hline
@@ -59,7 +59,7 @@ Implementacja kilku algorytmów rozwiązywania gry logicznej "Piętnastki" i ana
         \label{tab:solved}
     \end{minipage}
     \hfillx
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}[t]{0.5\textwidth}
         \centering
         \begin{tabular}{|l|l|l|l|}
             \hline
@@ -84,7 +84,11 @@ W dalszej części ruchy będą oznaczane.
     \item D -- (ang. down) w dół
     \item U -- (ang. up) w górę
 \end{itemize}
-
+\subsubsection{Złożonosć i rozwiązywalnosć}
+Ilość wszystkich stanów układanki można łatwo obliczyć znakując permutację bez powtórzeń zbioru elementów układanki($\{"puste\_pole",1,2\dots,15\}$).
+Stany układanki można podzielić ze względu na ich parzystość.
+Nie można przejść z układu do nieparzystego, czego oczywistą implikacją jest nierozwiązywalność połowy układów.\cite{15parity}
+Podsumowując ilość rozwiązywalnych stanów to $\frac{16!}{2}\approx 1.04\cdot10^{13}$  
 \subsection{Grafy}
 Grafem nazywamy strukturę danych modelującą zbiór wierzchołków i połączeń między nimi.
 \subsubsection{Reprezenatacja}
@@ -290,6 +294,12 @@ tak jak poprzednio, najistotniejsze są wnioski o charakterze uniwersalnym.}
   \bibitem{l2short} T. Oetiker, H. Partl, I. Hyna, E. Schlegl.
     \textsl{Nie za krótkie wprowadzenie do systemu \LaTeX2e}, 2007, dostępny
     online.
+   \bibitem{15mthWorks}
+   \textsl{15 Puzzle} \url{http://mathworld.wolfram.com/15Puzzle.html}
+   \bibitem{15in43moves} 
+   \textsl{The Fifteen Puzzle can be solved in 43 "moves"} \url{http://cubezzz.duckdns.org/drupal/?q=node/view/223}
+   \bibitem{15parity}
+   \textsl{The Fifteen Puzzle} \url{http://www.math.ubc.ca/~cass/courses/m308-02b/projects/grant/fifteen.html}
 \end{thebibliography}
 
 {\color{blue}
