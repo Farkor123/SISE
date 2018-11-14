@@ -87,40 +87,79 @@ W dalszej części ruchy będą oznaczane.
 \subsubsection{Złożonosć i rozwiązywalnosć}
 Ilość wszystkich stanów układanki można łatwo obliczyć znakując permutację bez powtórzeń zbioru elementów układanki($\{"puste\_pole",1,2\dots,15\}$).
 Stany układanki można podzielić ze względu na ich parzystość.
-Nie można przejść z układu do nieparzystego, czego oczywistą implikacją jest nierozwiązywalność połowy układów.\cite{15parity}
+Nie można przejść z układu do nieparzystego, czego oczywistą implikacją jest nierozwiązywalność połowy układów\cite{15parity}.
 Podsumowując ilość rozwiązywalnych stanów to $\frac{16!}{2}\approx 1.04\cdot10^{13}$  
 \subsection{Grafy}
 Grafem nazywamy strukturę danych modelującą zbiór wierzchołków i połączeń między nimi.
 \subsubsection{Reprezenatacja}
-\begin{figure}[h]
-    \includegraphics[scale = 0.4]{graf.png}
-    \caption{Przykładowy graf}
-\end{figure}
-\paragraph{Macierz sąsiedztwa}
-\begin{table}[h!]
+Najbardziej oczywistą formą reprezentacji grafów sa rysunki podobne do ilustracji \ref{example:graph}.
+Nie jest to jednak optymalny sposób przedstawiania grafu w pamięci komputera. 
+\begin{table}[H]
+    \begin{minipage}[b]{0.45\linewidth}\centering
+        \begin{figure}[H]
+            \includegraphics[width=\textwidth]{graf.png}
+            \caption{Przykładowy graf}
+            \label{example:graph}
+        \end{figure}
+    \end{minipage}
+    \hspace{0.5cm}
+    \begin{minipage}[b]{0.45\linewidth}
+    \centering
     \begin{tabular}{|l|lllll}
-    \hline
-     & \multicolumn{1}{l|}{1} & \multicolumn{1}{l|}{2} & \multicolumn{1}{l|}{3} & \multicolumn{1}{l|}{4} & \multicolumn{1}{l|}{5} \\ \hline
-    1 & 0 & 1 & 0 & 0 & 0 \\ \cline{1-1}
-    2 & 1 & 0 & 1 & 1 & 1 \\ \cline{1-1}
-    3 & 0 & 1 & 0 & 0 & 0 \\ \cline{1-1}
-    4 & 0 & 1 & 0 & 0 & 1 \\ \cline{1-1}
-    5 & 1 & 0 & 0 & 1 & 0 \\ \cline{1-1}
-    \end{tabular}
-    \caption{Przykładowa macierz sąsiedztwa}
-    \label{my-label}
+        \hline
+         & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{1} & \multicolumn{1}{l|}{2} & \multicolumn{1}{l|}{3} & \multicolumn{1}{l|}{4} \\ \hline
+        0 & 0 & 1 & 0 & 0 & 1 \\ \cline{1-1}
+        1 & 1 & 0 & 1 & 1 & 0 \\ \cline{1-1}
+        2 & 0 & 1 & 0 & 0 & 0 \\ \cline{1-1}
+        3 & 0 & 1 & 0 & 0 & 1 \\ \cline{1-1}
+        4 & 1 & 0 & 0 & 1 & 0 \\ \cline{1-1}
+        \end{tabular}
+        \caption{Przykładowa macierz sąsiedztwa}
+        \label{example:table}
+    \end{minipage}
     \end{table}
 
- \paragraph{Lista sąsiedztwa}
+\paragraph{Macierz sąsiedztwa}
+to sposób reprezentacji grafu w którym krawędzie reprezentowane są przez wartość 1 w komórce której pozycja odpowiada numerom wierzchołków.
+Na rysunku \ref{example:graph} widzimy połączenie 1--2. Jest ono reprezentowane w tablicy \ref{example:table} poprzez 1 na pozycji 12 i 21.
+Redundancja informacji spowodowana jest tym, że graf na rysunku \ref{example:graph} jest nieskierowany(nie można wyróżnić kierunku połączenia). 
+Wady tej metody reprezentacji ujawniają się w przypadku grafów o małej liczbie połączeń. 
+Ilość elementów w macierzy jest proporcjonalna do kwadratu ilości wierzchołków, gdy ilość połączeń jest znikoma duża część przechowywanych informacji to 0.
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|ll}
+    \cline{1-3}
+    \textbf{0} & 1 & \multicolumn{1}{l|}{4} &  \\ \hline
+    \textbf{1} & 2 & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{3} \\ \hline
+    \textbf{2} & 1 &  &  \\ \cline{1-3}
+    \textbf{3} & 1 & \multicolumn{1}{l|}{4} &  \\ \cline{1-3}
+    \textbf{4} & 3 & \multicolumn{1}{l|}{0} &  \\ \cline{1-3}
+    \end{tabular}
+    \caption{Przykładowa lista sąsiedztwa}
+    \label{example:list}
+    \end{table}
+\paragraph{Lista sąsiedztwa}
+to sposób reprezentacji grafu przez wektor wektorów, gdzie indeksami pierwszej z nich(pogrubione cyfry w tablicy \ref{example:list}) oznaczany numer wierzchołka.
+Pod każdym z indeksów znajduje się lista połączeń każdego wierzchołka. Zaletą tego rozwiązania jest stały czas dostępu do listy połączeń danego wierzchołka.
 
 \subsubsection{Metody przeszukiwania}
 \begin{description}
-    \item [DFS] Depth first search -- przeszukiwanie w głąb
-    \item [BFS] Breath first search -- przeszukiwanie w szerz
-    \item [A*] Przeszukiwanie oparte o heurystykę
+    \item [DFS] Depth first search -- przeszukiwanie w głąb\\ 
+    Opiera się na przeszukiwaniu od korzenia wzdłuż każdej gałęzi tak głęboko, jak to możliwe zanim zacznie się cofać
+    \item [BFS] Breath first search -- przeszukiwanie w szerz\\
+    Opiera się na przeciwnej strategii do DFS i najpierw przeszukuje najpłycej położone węzły, zanim zejdzie głębiej.
+    Z pośród rozważanych algorytmów jest to jedyny gwarantujący znalezienie najbliższego rozwiązania.
+    \item [A*]  A star/gwiazdka -- heurystyczne przeszukiwanie\\
+    Opiera się na zupełnie innym podejściu.
+    W każdej iteracji wyznaczany jest koszt stanów, zgodnie z używaną metryką, i algorytm przeszukuje drzewo w pierwszej kolejności po węzłach o najniższym koszcie.
+    \\
+    Wykorzystane metryki to:
     \begin{description}
-        \item [Manhattan]
-        \item [Hamminga]
+        \item [Manhattan] Dla każdego punktu liczona jest odległość od punktu docelowego
+        \[d=\sum_{i=1}^{n} |x_i-x'_i|+|y_i-y'_i|\] 
+        \item [Hamminga] Koszt zwiększa się wraz z każdym elementem będącym na złej pozycji
     \end{description}
 \end{description}
 
@@ -232,7 +271,7 @@ poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.
     \vspace{0.2cm}
     \includegraphics[width=\textwidth]{charts/BFS_recursed.png}
     \caption{BFS --  Średnia maksymalna głębokość rekursji}
-    \label{BFS:time}
+    \label{BFS:recursed}
 
 \end{figure}
 
@@ -242,7 +281,7 @@ poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.
     \label{BFS:time}
     \includegraphics[width=\textwidth]{charts/BFS_visited.png}
     \caption{BFS -- ŚŚrednia ilość odwiedzonych stanów}
-    \label{BFS:time}
+    \label{BFS:visited}
 \end{figure}
 
 \begin{figure}[H]
@@ -256,7 +295,7 @@ poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.
     \vspace{0.2cm}
     \includegraphics[width=\textwidth]{charts/DFS_recursed.png}
     \caption{DFS --  Średnia maksymalna głębokość rekursji}
-    \label{DFS:time}
+    \label{DFS:recursed}
 
 \end{figure}
 
@@ -266,7 +305,7 @@ poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.
     \label{DFS:time}
     \includegraphics[width=\textwidth]{charts/DFS_visited.png}
     \caption{DFS -- ŚŚrednia ilość odwiedzonych stanów}
-    \label{DFS:time}
+    \label{DFS:visited}
 \end{figure}
 
 
