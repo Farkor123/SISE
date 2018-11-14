@@ -2,7 +2,7 @@
 %
 % $Id$
 
-\NeedsTeXFormat{LaTeX2e}
+
 \ProvidesClass{classrep}[2009/11/27 ICS Class Assignment Report]
 
 \LoadClass[12pt,a4paper,authortitle]{mwart}
