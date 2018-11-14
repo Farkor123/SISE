@@ -171,23 +171,29 @@ Pod każdym z indeksów znajduje się lista połączeń każdego wierzchołka. Z
 \end{description}
 
 \section{Opis implementacji}
-{\color{blue}
-Należy tu zamieścić krótki i zwięzły opis zaprojektowanych klas oraz powiązań
-między nimi. Powinien się tu również znaleźć diagram UML (diagram klas)
-prezentujący najistotniejsze elementy stworzonej aplikacji. Należy także podać,
-w jakim języku programowania została stworzona aplikacja.}
+Implementację wykonano w języku Python3. 
+Całość implementacji poza parserem parametrów i funkcją main() zamyka się w jednej klasie o długości ok. 200 linii, dlatego zrezygnowaliśmy z zamieszczania diagramu UML.
 
 \section{Materiały i metody}
-{\color{blue}
-W tym miejscu należy opisać, jak przeprowadzone zostały wszystkie badania,
-których wyniki i dyskusja zamieszczane są w dalszych sekcjach. Opis ten
-powinien być na tyle dokładny, aby osoba czytająca go potrafiła wszystkie
-przeprowadzone badania samodzielnie powtórzyć w celu zweryfikowania ich
-poprawności. Przy opisie należy odwoływać się i stosować do
-opisanych w sekcji drugiej wzorów i oznaczeń, a także w jasny sposób opisać
-cel konkretnego testu. Najlepiej byłoby wyraźnie wyszczególnić (ponumerować)
-poszczególne eksperymenty tak, aby łatwo było się do nich odwoływać dalej.}
 
+\begin{enumerate}
+    \item  Przygotowanie danych
+        \begin{itemize}
+            \item Pobranie z platformy WIKAMP generatora układanek $4\times 4$
+            \item Wygenerowanie przypadków testowych
+        \end{itemize}
+    \item Uruchomienie przygotowanego programu
+        \begin{itemize}
+            \item Pobranie z platformy WIKAMP skryptu uruchamiającego.
+            \item Modyfikacja polecenia uruchamiającego w skrypcie.
+            \item Uruchomienie skryptu
+        \end{itemize}
+    \item Analiza wyników i generowanie wykresów przy pomocy Jupyter Notobook'a
+    \item Profit
+\end{enumerate}
+
+Celem zachowania wiarygodności pomiarów czasów program uruchomiono w środowisku tekstowym, jako process o największym priorytecie.
+Podczas przetwarzania nie doszło do użycia pamięci swap ani throttlingu procesora.
 \section{Wyniki}
 \newgeometry{left=1cm,right=0.1cm,bottom=4cm}
 \begin{figure}[H]
