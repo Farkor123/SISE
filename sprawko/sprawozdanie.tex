@@ -320,6 +320,7 @@ Wyniki zaprezentowane na rysunkach \ref{BFS:path_length}, \ref{BFS:processed}, \
 W przypadku algorytmu DFS w 1184 przypadkach rozwiązanie nie zostało odnalezione przyjęto wtedy, że długość ścieżki jest równa głębokości rekurencji, czyli 20.
 
 \section{Dyskusja}
+\subsection{Porównanie wszystkich algorytmów}
 Najbardziej oczywistym wnioskiem płynącym z rysunku \ref{col:all} jest to iż, z pośród rozważanych algorytmów DFS jest średnio najmniej optymalny.
 Otrzymane rezultaty tego sposobu rozwiązania, wymusiły użycie skali połlogarytmicznej, aby utrzymać czytelność wykresów.
 Ilustracja \ref{ALL:path_length} pokazuje, że DFS średnio odnajduje rozwiązanie dalekie od optymalnego.
@@ -331,20 +332,23 @@ Nieoptymalność przeszukiwania w głąb jest zgodna z intuicją autorów.
 Szanse na to, że rozwiązanie położone jest głębiej, niż szerzej wydają się być małe, biorąc pod uwagę jak szybko rozszerza graf przestrzeni stanów.
 
 
+Przeszukiwanie w szerz będące metodą brute-force szukającą najpłytszego rozwiązania przeszukując graf stanów poziom po poziomie, zawsze osiąga lepsze wyniki niż DFS.
+Na rysunku \ref{ALL:path_length} i \ref{ALL:rescursed} widać, że BFS zawsze odnajduje najpłytsze rozwiązanie. Na wykresach \ref{ALL:processed} i \ref{ALL:visited} widać, że ilość operacji jest znacznie mniejsza niż w przypadku metody w głąb i tylko nieznacznie wyższa niż przy użyciu algorytmu A*.
 
 
+Diagramy \ref{ALL:time}, \ref{ALL:processed} pokazują, że heurystyki dobrze rozwiązują problem przeszukiwania przestrzeni stanów. 
+Czas przetwarzania jest najkrótszy ze wszystkich rozpatrywanych algorytmów.
+Jak pokazuje \ref{ALL:path_length} szybkie odnajdywanie rozwiązania okupione zostało nieco dłuższą ścieżką do niego prowadzącą.
 
 
-
-
-
-
-
+Jeśli pominiemy wyniki otrzymane przy pomocy algorytmu DFS na ilustracjach \ref{ALL:processed}, \ref{ALL:time} i \ref{ALL:visited} widzimy liniowy wzrost analogicznych słupków, co w połączeniu z logarytmiczną osią y sugeruje wykładniczą złożoność problemu rozwiązania piętnastki. 
 \section{Wnioski}
-{\color{blue}
-W tej, przedostatniej, sekcji należy zamieścić podsumowanie najważniejszych
-wniosków z sekcji poprzedniej. Najlepiej jest je po prostu wypunktować. Znów,
-tak jak poprzednio, najistotniejsze są wnioski o charakterze uniwersalnym.}
+\begin{enumerate}
+    \item Nie używać DFS
+    \item Jeśli istnieje potrzeba znalezienia najpłytszego rozwiązania należy wykorzystać BFS.
+    \item Jeśli czas jest najważniejszym czynnikiem determinującym jakość rozwiązania należy użyć A*.
+    \item Złożoność problemu rośnie wykładniczo wraz z odległością rozwiązania.
+\end{enumerate}
 
 \begin{thebibliography}{0}
   \bibitem{l2short} T. Oetiker, H. Partl, I. Hyna, E. Schlegl.
