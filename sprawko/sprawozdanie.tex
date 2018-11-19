@@ -195,7 +195,7 @@ Całość implementacji poza parserem parametrów i funkcją main() zamyka się 
 Celem zachowania wiarygodności pomiarów czasów program uruchomiono w środowisku tekstowym, jako process o największym priorytecie.
 Podczas przetwarzania nie doszło do użycia pamięci swap ani throttlingu procesora.
 \section{Wyniki}
-\newgeometry{left=1cm,right=0.1cm,bottom=4cm}
+\newgeometry{left=1cm,right=0.1cm,top=1cm, bottom=3cm}
 \begin{figure}[H]
     \centering
     \begin{subfigure}[t]{0.45\textwidth}
@@ -310,24 +310,35 @@ Podczas przetwarzania nie doszło do użycia pamięci swap ani throttlingu proce
     \caption{DFS -- Średni czas przetwarzania}
     \label{DFS:time}
     \includegraphics[width=\textwidth]{charts/DFS_visited.png}
-    \caption{DFS -- ŚŚrednia ilość odwiedzonych stanów}
+    \caption{DFS -- Średnia ilość odwiedzonych stanów}
     \label{DFS:visited}
 \end{figure}
-
-
-
 \restoregeometry
+Rysunek \ref{col:all} pokazuje, że A* jest najlepszy jeśli chodzi o ilość przetworzonych stanów i czas rozwiązania. DFS jest zawsze najmniej optymalny.
+Przedstawione na rysunku \ref{coll:astr} wyniki metryk algorytmu A* wskazują iż metryka Hamminga działa lepiej dla rozwiązań położonych płycej niż 6.
+Wyniki zaprezentowane na rysunkach \ref{BFS:path_length}, \ref{BFS:processed}, \ref{BFS:recursed}, \ref{BFS:visited} i \ref{BFS:time} wskazują na brak korelacji między wynikami a użytym porządkiem sąsiedztwa.
+W przypadku algorytmu DFS w 1184 przypadkach rozwiązanie nie zostało odnalezione przyjęto wtedy, że długość ścieżki jest równa głębokości rekurencji, czyli 20.
 
 \section{Dyskusja}
-{\color{blue}
-Sekcja ta powinna zawierać dokładną interpretację uzyskanych wyników
-eksperymentów wraz ze szczegółowymi wnioskami z nich płynącymi. Najcenniejsze
-są, rzecz jasna, wnioski o charakterze uniwersalnym, które mogą być istotne
-przy innych, podobnych zadaniach. Należy również omówić i wyjaśnić wszystkie
-napotkane problemy (jeśli takie były). Każdy wniosek powinien mieć poparcie we
-wcześniej przeprowadzonych eksperymentach (odwołania do konkretnych wyników).
-Jest to jedna z najważniejszych sekcji tego sprawozdania, gdyż prezentuje
-poziom zrozumienia badanego problemu.}
+Najbardziej oczywistym wnioskiem płynącym z rysunku \ref{col:all} jest to iż, z pośród rozważanych algorytmów DFS jest średnio najmniej optymalny.
+Otrzymane rezultaty tego sposobu rozwiązania, wymusiły użycie skali połlogarytmicznej, aby utrzymać czytelność wykresów.
+Ilustracja \ref{ALL:path_length} pokazuje, że DFS średnio odnajduje rozwiązanie dalekie od optymalnego.
+Na diagramie \ref{ALL:rescursed} widać, że osiągana głębokość przeszukiwania nie zwiększa się znacząco, jeśli rozwiązanie położone jest w odległości 4 lub większej.
+Powodem tego jest odgórnie nałożony limit maksymalnej głębokości rekursji wynoszący w naszym przypadku 20.
+Na rysunkach \ref{ALL:processed} i \ref{ALL:visited} widać, że znacznie większa głębokość rekursji koreluje z wielokrotnie wyższymi statystykami wierzchołków odwiedzonych i przetworzonych.
+Potrzeba przetworzenia znacznie większej części przestrzeni stanów objawi się też znacznie dłuższym czasem wykonania widocznymi na \ref{ALL:time}.
+Nieoptymalność przeszukiwania w głąb jest zgodna z intuicją autorów.
+Szanse na to, że rozwiązanie położone jest głębiej, niż szerzej wydają się być małe, biorąc pod uwagę jak szybko rozszerza graf przestrzeni stanów.
+
+
+
+
+
+
+
+
+
+
 
 \section{Wnioski}
 {\color{blue}
@@ -346,9 +357,5 @@ tak jak poprzednio, najistotniejsze są wnioski o charakterze uniwersalnym.}
    \bibitem{15parity}
    \textsl{The Fifteen Puzzle} \url{http://www.math.ubc.ca/~cass/courses/m308-02b/projects/grant/fifteen.html}
 \end{thebibliography}
-
-{\color{blue}
-Na końcu należy obowiązkowo podać cytowaną w sprawozdaniu literaturę, z której
-grupa korzystała w trakcie prac nad zadaniem.}
 
 \end{document}
