@@ -170,6 +170,11 @@ Pod każdym z indeksów znajduje się lista połączeń każdego wierzchołka. Z
     \item 
 \end{description}
 
+\subsection{Struktury danych}
+\subsubsection{Kopiec}
+%to do
+\subsubsection{HashSet}
+%To do
 \section{Opis implementacji}
 Implementację wykonano w języku Python3. 
 Całość implementacji poza parserem parametrów i funkcją main() zamyka się w jednej klasie o długości ok. 200 linii, dlatego zrezygnowaliśmy z zamieszczania diagramu UML.
@@ -342,12 +347,29 @@ Jak pokazuje \ref{ALL:path_length} szybkie odnajdywanie rozwiązania okupione zo
 
 
 Jeśli pominiemy wyniki otrzymane przy pomocy algorytmu DFS na ilustracjach \ref{ALL:processed}, \ref{ALL:time} i \ref{ALL:visited} widzimy liniowy wzrost analogicznych słupków, co w połączeniu z logarytmiczną osią y sugeruje wykładniczą złożoność problemu rozwiązania piętnastki. 
+\subsection{A*}
+Wykorzystana implementacja algorytmu A* wykorzystuje metryki Hamminga i Manhattan.
+Jak widać na \ref{ASTR:path_length} do głębokości 6 obie metryki znajdują najlepsze rozwiązanie.
+W przypadku głębokości 7 nieco lepsze wyniki osiąga metryka Manhattan.
+
+Diagram \ref{ASTR:processed} pokazuje, że metryka Hamminga pozwala odnaleźć rozwiązanie, przy mniejszej ilości przetworzonych, jeśli jest ono położone płytko(5 lub wyżej).
+Metryka Manhattan, pomimo osiągania nieco gorszych wyników, przy małych głębokościach przy dużych wygrywa znacznie.
+Gdy rozwiązanie wymaga co najmniej 7 ruchów, jego znalezienie wymaga ok 8 razy mniej przetworzonych stanów.
+Wyniki te bardzo mocno korelują z czasem przetwarzania(\ref{ASTR:time}) i ilością odwiedzonych stanów(\ref{ASTR:visited}).
+Mimo znacznie większej ilości przetworzonych stanów na rysunku \ref{ASTR:rescursed} widać rezultaty podobne do poprzednich.
+Do głębokości 5 metryka Hamminga wygrywa lub wyniki są równe.
+W przypadku głębszych rozwiązań tak jak poprzednio optymalniejsza jest metryka Manhattan, jednak jej przewaga nie jest tak przemożna jak w ilości przetworzonych stanów(\ref{ASTR:processed}) i czasie przetwarzania(\ref{ASTR:time}).
+
+Metryka Manhattan, mimo większej złożoności szacowania pojedynczego stanu, osiąga wyniki akceptowalnie dobre wyniki dla płytkich rozwiązań, będąc zwykle nie gorsza niż 20\% jednocześnie osiągając znacznie krótsze czasy przetwarzania(\ref{ASTR:time}) i przetworzenia(\ref{ALL:processed}) dla głębszych rozwiązań.  
+
+
 \section{Wnioski}
 \begin{enumerate}
     \item Nie używać DFS
     \item Jeśli istnieje potrzeba znalezienia najpłytszego rozwiązania należy wykorzystać BFS.
     \item Jeśli czas jest najważniejszym czynnikiem determinującym jakość rozwiązania należy użyć A*.
     \item Złożoność problemu rośnie wykładniczo wraz z odległością rozwiązania.
+    \item Metryka Manhattan lepiej sprawdza się jeśli rozwiązanie jest położone głębiej.
 \end{enumerate}
 
 \begin{thebibliography}{0}
