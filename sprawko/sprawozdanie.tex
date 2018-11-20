@@ -362,6 +362,15 @@ W przypadku głębszych rozwiązań tak jak poprzednio optymalniejsza jest metry
 
 Metryka Manhattan, mimo większej złożoności szacowania pojedynczego stanu, osiąga wyniki akceptowalnie dobre wyniki dla płytkich rozwiązań, będąc zwykle nie gorsza niż 20\% jednocześnie osiągając znacznie krótsze czasy przetwarzania(\ref{ASTR:time}) i przetworzenia(\ref{ALL:processed}) dla głębszych rozwiązań.  
 
+\subsection{BFS}
+Przeszukiwanie w szerz jest algorytmem optymalnym.
+Zawsze znajduje rozwiązanie położone tak płytko jak to możliwe.
+Widać to na wykresach \ref{BFS:path_length} i \ref{BFS:recursed}, gdzie głębokość znalezionego rozwiązania jest zawsze najmniejsza, a przeszukiwania nigdy nie osiąga głębokości rekursji większej niż rozwiązanie.
+
+Diagram \ref{BFS:processed} pokazuje, że testowane porządki nie mają większego wpływu na ilość przetworzonych stanów.
+Czas wykonania(rys.\ref{BFS:time}) i ilość odwiedzonych stanów(rys.\ref{BFS:visited}) wyraźnie korelują z ilością przetworzonych stanów, nie różnicując się zbytnio w zależności od porządku.
+
+\subsection{DFS}
 
 \section{Wnioski}
 \begin{enumerate}
@@ -370,6 +379,7 @@ Metryka Manhattan, mimo większej złożoności szacowania pojedynczego stanu, o
     \item Jeśli czas jest najważniejszym czynnikiem determinującym jakość rozwiązania należy użyć A*.
     \item Złożoność problemu rośnie wykładniczo wraz z odległością rozwiązania.
     \item Metryka Manhattan lepiej sprawdza się jeśli rozwiązanie jest położone głębiej.
+    \item Porządek nie ma wpływu na BFS.
 \end{enumerate}
 
 \begin{thebibliography}{0}
