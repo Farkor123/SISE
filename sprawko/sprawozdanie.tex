@@ -355,22 +355,33 @@ W przypadku głębokości 7 nieco lepsze wyniki osiąga metryka Manhattan.
 Diagram \ref{ASTR:processed} pokazuje, że metryka Hamminga pozwala odnaleźć rozwiązanie, przy mniejszej ilości przetworzonych, jeśli jest ono położone płytko(5 lub wyżej).
 Metryka Manhattan, pomimo osiągania nieco gorszych wyników, przy małych głębokościach przy dużych wygrywa znacznie.
 Gdy rozwiązanie wymaga co najmniej 7 ruchów, jego znalezienie wymaga ok 8 razy mniej przetworzonych stanów.
-Wyniki te bardzo mocno korelują z czasem przetwarzania(\ref{ASTR:time}) i ilością odwiedzonych stanów(\ref{ASTR:visited}).
+Wyniki te bardzo mocno korelują z czasem przetwarzania(rys.\ref{ASTR:time}) i ilością odwiedzonych stanów(rys.\ref{ASTR:visited}).
 Mimo znacznie większej ilości przetworzonych stanów na rysunku \ref{ASTR:rescursed} widać rezultaty podobne do poprzednich.
 Do głębokości 5 metryka Hamminga wygrywa lub wyniki są równe.
-W przypadku głębszych rozwiązań tak jak poprzednio optymalniejsza jest metryka Manhattan, jednak jej przewaga nie jest tak przemożna jak w ilości przetworzonych stanów(\ref{ASTR:processed}) i czasie przetwarzania(\ref{ASTR:time}).
+W przypadku głębszych rozwiązań tak jak poprzednio optymalniejsza jest metryka Manhattan, jednak jej przewaga nie jest tak przemożna jak w ilości przetworzonych stanów(rys.\ref{ASTR:processed}) i czasie przetwarzania(rys.\ref{ASTR:time}).
 
-Metryka Manhattan, mimo większej złożoności szacowania pojedynczego stanu, osiąga wyniki akceptowalnie dobre wyniki dla płytkich rozwiązań, będąc zwykle nie gorsza niż 20\% jednocześnie osiągając znacznie krótsze czasy przetwarzania(\ref{ASTR:time}) i przetworzenia(\ref{ALL:processed}) dla głębszych rozwiązań.  
+Metryka Manhattan, mimo większej złożoności szacowania pojedynczego stanu, osiąga wyniki akceptowalnie dobre wyniki dla płytkich rozwiązań, będąc zwykle nie gorsza niż 20\% jednocześnie osiągając znacznie krótsze czasy przetwarzania(rys.\ref{ASTR:time}) i przetworzenia(rys.\ref{ALL:processed}) dla głębszych rozwiązań.  
 
 \subsection{BFS}
 Przeszukiwanie w szerz jest algorytmem optymalnym.
-Zawsze znajduje rozwiązanie położone tak płytko jak to możliwe.
+Oznacza to, że zawsze znajduje rozwiązanie położone tak płytko jak to możliwe.
 Widać to na wykresach \ref{BFS:path_length} i \ref{BFS:recursed}, gdzie głębokość znalezionego rozwiązania jest zawsze najmniejsza, a przeszukiwania nigdy nie osiąga głębokości rekursji większej niż rozwiązanie.
 
 Diagram \ref{BFS:processed} pokazuje, że testowane porządki nie mają większego wpływu na ilość przetworzonych stanów.
-Czas wykonania(rys.\ref{BFS:time}) i ilość odwiedzonych stanów(rys.\ref{BFS:visited}) wyraźnie korelują z ilością przetworzonych stanów, nie różnicując się zbytnio w zależności od porządku.
+Czas wykonania(rys.\ref{BFS:time}) i ilość odwiedzonych stanów(rys.\ref{BFS:visited}) wyraźnie korelują z ilością przetworzonych stanów(rys.\ref{BFS:processed}), nie różnicując się zbytnio w zależności od porządku.
 
 \subsection{DFS}
+
+Rozpatrując długość rozwiązania jako miarę jego jakości rysunek \ref{DFS:path_length} ciężko wskazać najlepszy porządek dla algorytmu DFS.
+Porządki postaci *UL jak RDUL, DRUL i DRLU osiągają lepsze rezultaty dla bardzo płytkich rozwiązań(3 i płytsze), jednak już na głębokości 4 są wyraźnie gorsze(RDUL i DRLU) lub porównywalne z resztą(RDLU).
+Na wykresach czasu przetwarzania(rys.\ref{BFS:time}), ilości odwiedzonych(rys.\ref{BFS:visited}) i przetworzonych(rys.\ref{BFS:processed}) węzłów widoczna jest podobna zależność.
+Wyniki przeszukiwania w głąb spłaszczone są przez narzucony przez autorów maksymalny limit rekursji wynoszący 20.
+Osiągnięcie tej wartości powoduje koniec przetwarzania i zwrócenie braku odnalezienia rozwiązania.
+1184 przypadki zakończyły się takim rezultatem.
+Jest to szczególnie widoczne na diagramie średniej maksymalnej rekursji(rys.\ref{DFS:recursed}), gdzie porządki idące szybko w lewo jak LUDR,ULDR,LURD,UlDR już na głębokości 2 średnio nie znajdują rozwiązania.
+
+ 
+
 
 \section{Wnioski}
 \begin{enumerate}
