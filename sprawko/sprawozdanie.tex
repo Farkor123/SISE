@@ -165,14 +165,47 @@ Pod każdym z indeksów znajduje się lista połączeń każdego wierzchołka. Z
 
 \subsubsection{Pozostałe pojęcia}
 \begin{description}
-    \item [Cykl]
+    \item [Cykliczność]
+    Graf można zaklasyfikować jako cykliczny kiedy daje się w nim wytyczyć ścieżkę która zaczyna i kończy się w tym samym wierzchołku\cite{AlgDataStrucure}.
+    Przykładowy graf z rysunku \ref{example:graph} ma cykl składający się z wierzchołków  1--0--4--3--1.
     \item [Droga]
     \item 
 \end{description}
 
 \subsection{Struktury danych}
 \subsubsection{Kopiec}
-%to do
+\begin{table}[H]
+    \begin{minipage}[b]{0.45\linewidth}\centering
+        \begin{figure}[H]
+            \includegraphics[width=\textwidth]{heap.png}
+            \caption{Przykładowy graf drzewiasty}
+            \label{heap:graph}
+        \end{figure}
+    \end{minipage}
+    \hspace{0.5cm}
+    \begin{minipage}[b]{0.45\linewidth}
+    \centering
+    \begin{tabular}{|l||l|l||l|l|l|l||l|l|l|}
+        \hline
+        9 & 8 & 6 & 7 & 4 & 5 & 2 & 0 & 3 & 1 \\ \hline
+        \end{tabular}
+        \caption{Kopiec powstały z drzewa rys.\ref{heap:graph}}
+        \label{heap:table}
+    \end{minipage}
+    \end{table}
+
+Kopiec jest strukturą danych reprezentującą drzewo binarne(spójny graf acykliczny) w postaci wektora\cite{STLAlgsVid}.
+Kopce można podzielić na dwa typy\cite{IntroToAlgs}:
+\begin{description}
+    \item [Kopce max] gdzie wartość potomka jest zawsze mniejsza niż wartość rodzica.
+    \item [Kopce min] gdzie wartość potomka jest zawsze większa niż wartość rodzica.
+\end{description}
+
+Rysunek \ref{heap:graph} przedstawia drzewo binarne które zostało przedstawione jako kopiec w tablicy \ref{heap:table}.
+Kopiec można wyobrażać sobie jako kolejne poziomy drzewa binarnego dodawane na koniec tablicy.
+Dla ułatwienia w tablicy \ref{heap:table} kolejne poziomy drzewa zostały oddzielone dodatkową linią.
+Łatwo zauważyć, że pierwszy element nazywany też korzeniem(ang.root) jest w zależności od typu kopca jego największym(kopiec max) lub najniższym(kopiec min) elementem.
+Struktura jest używana aby móc szybko otrzymać największy lub najmniejszy element kolekcji\cite{STLAlgsVid}.
 \subsubsection{HashSet}
 %To do
 \section{Opis implementacji}
@@ -403,6 +436,11 @@ Jest to szczególnie widoczne na diagramie średniej maksymalnej rekursji(rys.\r
    \textsl{The Fifteen Puzzle can be solved in 43 "moves"} \url{http://cubezzz.duckdns.org/drupal/?q=node/view/223}
    \bibitem{15parity}
    \textsl{The Fifteen Puzzle} \url{http://www.math.ubc.ca/~cass/courses/m308-02b/projects/grant/fifteen.html}
+   \bibitem{AlgDataStrucure} J.Wałaszek \textsl{Algorytmy i struktury danych}
+   \url{https://eduinf.waw.pl/inf/alg/001_search/0132.php}
+   \bibitem{STLAlgsVid} J. Boccara \textsl{105 STL Algorithms in Less Than an Hour} 
+   \url{https://youtu.be/2olsGf6JIkU}
+   \bibitem{IntroToAlgs} T.H. Cormen, C.E. Leiserson, R.L. Rivest, C. Stein \textsl{Wprowadzenie do algorytmów}, 2007
 \end{thebibliography}
 
 \end{document}
