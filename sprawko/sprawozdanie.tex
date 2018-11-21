@@ -88,7 +88,9 @@ W dalszej części ruchy będą oznaczane.
 Ilość wszystkich stanów układanki można łatwo obliczyć znakując permutację bez powtórzeń zbioru elementów układanki($\{"puste\_pole",1,2\dots,15\}$).
 Stany układanki można podzielić ze względu na ich parzystość.
 Nie można przejść z układu do nieparzystego, czego oczywistą implikacją jest nierozwiązywalność połowy układów\cite{15parity}.
-Podsumowując ilość rozwiązywalnych stanów to $\frac{16!}{2}\approx 1.04\cdot10^{13}$  
+Podsumowując ilość rozwiązywalnych stanów to $\frac{16!}{2}\approx 1.04\cdot10^{13}$.
+Zakładając, że nie jest możliwe wykonywanie ruchów przesuwających 3 pola naraz maksymalna głębokość rozwiązania wynosi 83, jeśli takie ruchy są dozwolone 43 \cite{15in43moves}.
+
 \subsection{Grafy}
 Grafem nazywamy strukturę danych modelującą zbiór wierzchołków i połączeń między nimi.
 \subsubsection{Reprezenatacja}
@@ -207,7 +209,16 @@ Dla ułatwienia w tablicy \ref{heap:table} kolejne poziomy drzewa zostały oddzi
 Łatwo zauważyć, że pierwszy element nazywany też korzeniem(ang.root) jest w zależności od typu kopca jego największym(kopiec max) lub najniższym(kopiec min) elementem.
 Struktura jest używana aby móc szybko otrzymać największy lub najmniejszy element kolekcji\cite{STLAlgsVid}.
 \subsubsection{HashSet}
-%To do
+Set jest nieuporządkowanym zbiorem elementów bez duplikatów \cite{PythonDoc}.
+Jego główną zaletą jest szybka możliwość sprawdzenia czy obiekt znajduje się w nim.
+Średnia złożoność takiej operacji to O(1) \cite{PythonWiki}.
+Najgorszy przypadek sprawdzenia czy dany element jest w secie występuje gdy każdy element kolekcji powoduje kolizję tego samego haszu.
+W takim przypadku złożoność wynosi O(n)\cite{PythonWiki}.
+
+
+Set jest zwykle implementowany jako wektor wektorów gdzie index dodawanego elementu oblicza się ze wzoru $inex = hash(obj) \pmod{set\_len} $
+Jeśli wystąpi kolizja haszy, czyli funkcja haszująca zwróci tą samą liczbę lub hasze przystają modulo długość wektora setu, wtedy dwa lub więcej elementy znajdują w wektorze pod danym indeksem.
+
 \section{Opis implementacji}
 Implementację wykonano w języku Python3. 
 Całość implementacji poza parserem parametrów i funkcją main() zamyka się w jednej klasie o długości ok. 200 linii, dlatego zrezygnowaliśmy z zamieszczania diagramu UML.
@@ -441,6 +452,8 @@ Jest to szczególnie widoczne na diagramie średniej maksymalnej rekursji(rys.\r
    \bibitem{STLAlgsVid} J. Boccara \textsl{105 STL Algorithms in Less Than an Hour} 
    \url{https://youtu.be/2olsGf6JIkU}
    \bibitem{IntroToAlgs} T.H. Cormen, C.E. Leiserson, R.L. Rivest, C. Stein \textsl{Wprowadzenie do algorytmów}, 2007
+   \bibitem{PythonDoc} \textsl{Dokumentacja języka Python 3.7} rozdział 5.4 Sets, dostępna \url{https://docs.python.org/3/tutorial/datastructures.html}
+   \bibitem{PythonWiki} \textsl{Wiki języka Python3} \url{https://wiki.python.org/moin/TimeComplexity}
 \end{thebibliography}
 
 \end{document}
