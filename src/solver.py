@@ -209,13 +209,16 @@ class Puzzle:
         visited = 0
         recursion = 0
         processed = 0
-        priority = ['U', 'L', 'D', 'R']
+        priority = ['D', 'R', 'U', 'L']
         exfrontier = set()
         heapq.heappush(states, self)
         while len(states) > 0:
             processed += 1
+            #for i in states:
+                #print(i.distance)
             state = heapq.heappop(states)
-            print(state.distance)
+            #print("popped:")
+            #print(state.distance)
             if state.depth < recursion_depth:
                 x = state.generate_new_states(priority)
                 for i in x:
