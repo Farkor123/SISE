@@ -185,6 +185,8 @@ class Puzzle:
         misplaced = 0
         for h in range(self.height):
             for w in range(self.width):
+                if self.board[h][w] == 0:
+                    continue
                 if h==self.height-1 and w==self.width-1:
                     if self.board[h][w] != 0:
                         misplaced += 1
@@ -198,8 +200,8 @@ class Puzzle:
             for w in range(self.width):
                 x = self.board[h][w]
                 if x == 0:
-                    pass
-                distance += abs(h-int((x-1)/self.width)) + abs(w-((x-1)%self.width))
+                    continue
+                distance += abs(h-(x-1)//self.width) + abs(w-((x-1)%self.width))
         self.distance = distance
 
     def solve_astr(self, metric, recursion_depth):
@@ -208,23 +210,29 @@ class Puzzle:
         recursion = 0
         processed = 0
         priority = ['U', 'L', 'D', 'R']
+        exfrontier = set()
         heapq.heappush(states, self)
         while len(states) > 0:
             processed += 1
             state = heapq.heappop(states)
+            print(state.distance)
             if state.depth < recursion_depth:
                 x = state.generate_new_states(priority)
                 for i in x:
-                    if i.depth > recursion:
-                        recursion = i.depth
-                    if i.is_goal_state():
-                        return len(i.path), i.path, visited, processed, recursion
-                    if metric == "hamm":
-                        i.hamming_metric()
+                    if i in exfrontier:
+                        x.remove(i)
                     else:
-                        i.manhattan_metric()
-                    visited += 1
-                    heapq.heappush(states, i)
+                        if i.depth > recursion:
+                            recursion = i.depth
+                        if i.is_goal_state():
+                            return len(i.path), i.path, visited, processed, recursion
+                        if metric == "hamm":
+                            i.hamming_metric()
+                        elif metric == "manh":
+                            i.manhattan_metric()
+                        visited += 1
+                        heapq.heappush(states, i)
+                        exfrontier.add(i)
         return -1, [], visited, processed, recursion
 
 
