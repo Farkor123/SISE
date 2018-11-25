@@ -5,7 +5,37 @@ import Parser
 import time
 from decimal import *
 
-recursion_depth=20
+recursion_depth = 20
+goal_state = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 0]
+]
+goal_state_pos = [[3, 3],
+                  [0, 0],
+                  [0, 1],
+                  [0, 2],
+                  [0, 3],
+                  [0, 0],
+                  [1, 1],
+                  [1, 2],
+                  [1, 3],
+                  [2, 0],
+                  [2, 1],
+                  [2, 2],
+                  [2, 3],
+                  [3, 0],
+                  [3, 1],
+                  [3, 2]
+                  ]
+
+
+def traverse_nested_list(nested_list):
+    for row in nested_list:
+        for point in row:
+            yield point
+
 
 class Puzzle:
     # current board state
@@ -37,7 +67,7 @@ class Puzzle:
             self.height = deepcopy(arg.height)
             self.path = deepcopy(arg.path)
             self.lastMove = deepcopy(arg.lastMove)
-            self.depth = deepcopy(arg.depth)+1
+            self.depth = deepcopy(arg.depth) + 1
         else:
             raise TypeError("Argument is neither path nor puzzle!")
 
@@ -82,11 +112,11 @@ class Puzzle:
         # gets list of possible moves for zero
         h, w = self.get_zero_pos()
         ret = []
-        if h != self.height-1:
+        if h != self.height - 1:
             ret.append('D')
         if h != 0:
             ret.append('U')
-        if w != self.width-1:
+        if w != self.width - 1:
             ret.append('R')
         if w != 0:
             ret.append('L')
@@ -114,7 +144,7 @@ class Puzzle:
 
     def is_goal_state(self):
         # checks if state is goal state
-        if self.board == [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]]:
+        if self.board == goal_state:
             return True
         return False
 
@@ -181,26 +211,27 @@ class Puzzle:
                 frontier = x + frontier
         return -1, [], visited, processed, recursion
 
-    def hamming_metric(self):
+    def hamming_metric(self, current_dist):
         misplaced = 0
-        for h in range(self.height):
-            for w in range(self.width):
-                if h==self.height-1 and w==self.width-1:
-                    if self.board[h][w] != 0:
-                        misplaced += 1
-                elif self.board[h][w] != self.width*h+w+1:
-                    misplaced += 1
+        for board_point, goal_point in zip(traverse_nested_list(self.board), traverse_nested_list(goal_state)):
+            if board_point == 0:
+                pass
+            if board_point != goal_point:
+                misplaced += 1
         self.distance = misplaced
 
-    def manhattan_metric(self):
+    def manhattan_metric(self, current_dist):
         distance = 0
         for h in range(self.height):
             for w in range(self.width):
-                x = self.board[h][w]
-                if x == 0:
+                board_point = self.board[h][w]
+                if board_point == 0:
                     pass
-                distance += abs(h-int((x-1)/self.width)) + abs(w-((x-1)%self.width))
-        self.distance = distance
+                else:
+                    goal_x, goal_y = goal_state_pos[board_point]
+                    dist = abs(h-goal_x)+abs(w-goal_y)
+                    distance+=dist
+        self.distance = distance + current_dist
 
     def solve_astr(self, metric, recursion_depth):
         states = []
@@ -220,9 +251,9 @@ class Puzzle:
                     if i.is_goal_state():
                         return len(i.path), i.path, visited, processed, recursion
                     if metric == "hamm":
-                        i.hamming_metric()
+                        i.hamming_metric(len(i.path))
                     else:
-                        i.manhattan_metric()
+                        i.manhattan_metric(len(i.path))
                     visited += 1
                     heapq.heappush(states, i)
         return -1, [], visited, processed, recursion
@@ -262,18 +293,18 @@ if __name__ == "__main__":
     f.close()
 
     f = open(solution, 'a')
-    f.write(str(amount)+"\n")
+    f.write(str(amount) + "\n")
     if amount != -1:
-        f.write("".join(path)+"\n")
+        f.write("".join(path) + "\n")
     f.close()
 
     f = open(more, 'x')
     f.close()
 
     f = open(more, 'a')
-    f.write(str(amount)+"\n")
-    f.write(str(visited)+"\n")
-    f.write(str(processed)+"\n")
-    f.write(str(recursed)+"\n")
-    f.write(str(round(time,3)))
+    f.write(str(amount) + "\n")
+    f.write(str(visited) + "\n")
+    f.write(str(processed) + "\n")
+    f.write(str(recursed) + "\n")
+    f.write(str(round(time, 3)))
     f.close()
