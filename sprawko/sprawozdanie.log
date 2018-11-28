@@ -1,0 +1,569 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.10.17)  21 NOV 2018 15:15
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/plisik/Documents/SISE/SISE/sprawko/sprawozdanie.tex
+(/home/plisik/Documents/SISE/SISE/sprawko/sprawozdanie.tex
+LaTeX2e <2018-04-01> patch level 5
+(./classrep.cls
+Document Class: classrep 2009/11/27 ICS Class Assignment Report
+(/usr/share/texmf-dist/tex/latex/mwcls/mwart.cls
+Document Class: mwart 2017/05/13 v0.75 A LaTeX document class (MW)
+*** Beta version. Formatting may change
+*** in future versions of this class.
+(/usr/share/texmf-dist/tex/latex/mwcls/mw12.clo
+File: mw12.clo 2017/05/13 v0.75 A document class size option (MW)
+)
+\@parindent=\dimen102
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+) (/usr/share/texmf-dist/tex/latex/polski/polski.sty
+Package: polski 2017/05/04 v1.3.4 Polish language package
+ (/usr/share/texmf-dist/tex/latex/base/ot4enc.def
+File: ot4enc.def 2017/04/05 v2.0i Standard LaTeX file
+Now handling font encoding OT4 ...
+... no UTF-8 mapping file for font encoding OT4
+)) (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+) (/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/09/02 3.23 The Babel package
+ (/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/09/02 3.23 Babel switching mechanism
+) (/usr/share/texmf-dist/tex/generic/babel-polish/polish.ldf
+Language: polish 2005/03/31 v1.2l Polish support from the babel system
+ (/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/09/02 3.23 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen104
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count89
+)
+Package babel Info: Making " an active character on input line 83.
+\pl@left=\dimen105
+\pl@down=\dimen106
+\pl@right=\dimen107
+\pl@temp=\dimen108
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen109
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen110
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip11
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks18
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks19
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks20
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+) (/usr/share/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+) (/usr/share/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+ (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+) (/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) (/usr/share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic.tex) (/usr/share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.tex)) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count102
+\float@exts=\toks23
+\float@box=\box28
+\@float@everytoks=\toks24
+\@floatcapt=\box29
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+) (/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count103
+\Gm@cntv=\count104
+\c@Gm@tempcnt=\count105
+\Gm@bindingoffset=\dimen120
+\Gm@wd@mp=\dimen121
+\Gm@odd@mp=\dimen122
+\Gm@even@mp=\dimen123
+\Gm@layoutwidth=\dimen124
+\Gm@layoutheight=\dimen125
+\Gm@layouthoffset=\dimen126
+\Gm@layoutvoffset=\dimen127
+\Gm@dimlist=\toks25
+) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen128
+\captionmargin@=\dimen129
+\captionwidth=\dimen130
+\caption@tempdima=\dimen131
+\caption@indent=\dimen132
+\caption@parindent=\dimen133
+\caption@hangindent=\dimen134
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\addvspace \abovecaptionskip \bgroup \centeredlast #1.\enspace #2\par \egroup \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count106
+Package caption Info: float package is loaded.
+) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+\c@subfigure=\count107
+\c@subtable=\count108
+)
+   defining Unicode char U+00A0 (decimal 160)
+ (./sprawozdanie.aux)
+\openout1 = `sprawozdanie.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 39.
+LaTeX Font Info:    Try loading font information for OT4+cmr on input line 39.
+ (/usr/share/texmf-dist/tex/latex/polski/ot4cmr.fd
+File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    ... okay on input line 39.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen135
+\scratchbox=\box30
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen136
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ (/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))) (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 39.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-1.86334pt
+* \headheight=14.5pt
+* \headsep=16.5pt
+* \topskip=12.0pt
+* \footskip=29.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=25.6802pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \@caption).
+(caption)             \@caption = \long macro:#1[#2]#3->\par \addcontentsline {\csname ext@#1\endcsname }{#1}{\protect \numberline {\csname the#1\endcsname .}{\ignorespaces #2}}\begingroup \@parboxrestore \if@minipage \@setminipage \fi \captionsettings \@makecaption {\csname fnum@#1\endcsname }{\ignorespaces #3}\par \endgroup .
+
+Package caption Warning: Forced redefinition of \caption since the
+(caption)                unsupported(!) package option `compatibility=false'
+(caption)                was given.
+See the caption package documentation for explanation.
+
+Package caption Info: End \AtBeginDocument code.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+
+ []
+
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 40.
+(/usr/share/texmf-dist/tex/latex/polski/ot4cmtt.fd
+File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<graf.png, id=9, 336.25626pt x 263.98625pt>
+File: graf.png Graphic file (type png)
+<use graf.png>
+Package pdftex.def Info: graf.png  used on input line 102.
+(pdftex.def)             Requested size: 188.21288pt x 147.7628pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \vbox (badness 2150) has occurred while \output is active []
+
+ [3 <./graf.png>]
+<heap.png, id=22, 353.32pt x 341.275pt>
+File: heap.png Graphic file (type png)
+<use heap.png>
+Package pdftex.def Info: heap.png  used on input line 182.
+(pdftex.def)             Requested size: 188.21288pt x 181.7966pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (3.69542pt too wide) in paragraph at lines 212--217
+[]\OT4/cmr/m/n/12 Set jest nie-upo-rz¡d-ko-wa-nym zbio-rem ele-men-tów bez du-pli-ka-tów [[]]. Jego gªówn¡
+ []
+
+[5 <./heap.png>] [6]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(28.45274pt, 566.20969pt, 2.84544pt)
+* v-part:(T,H,B)=(28.45274pt, 731.23584pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=566.20969pt
+* \textheight=731.23584pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-74.81725pt
+* \headheight=14.5pt
+* \headsep=16.5pt
+* \topskip=12.0pt
+* \footskip=29.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=25.6802pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<charts/ALL_path_length.png, id=36, 433.62pt x 289.08pt>
+File: charts/ALL_path_length.png Graphic file (type png)
+<use charts/ALL_path_length.png>
+Package pdftex.def Info: charts/ALL_path_length.png  used on input line 251.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ALL_processed.png, id=37, 433.62pt x 289.08pt>
+File: charts/ALL_processed.png Graphic file (type png)
+<use charts/ALL_processed.png>
+Package pdftex.def Info: charts/ALL_processed.png  used on input line 258.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ALL_recursed.png, id=38, 433.62pt x 289.08pt>
+File: charts/ALL_recursed.png Graphic file (type png)
+<use charts/ALL_recursed.png>
+Package pdftex.def Info: charts/ALL_recursed.png  used on input line 266.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ALL_time.png, id=39, 433.62pt x 289.08pt>
+File: charts/ALL_time.png Graphic file (type png)
+<use charts/ALL_time.png>
+Package pdftex.def Info: charts/ALL_time.png  used on input line 271.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ALL_visited.png, id=40, 433.62pt x 289.08pt>
+File: charts/ALL_visited.png Graphic file (type png)
+<use charts/ALL_visited.png>
+Package pdftex.def Info: charts/ALL_visited.png  used on input line 276.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ASTR_path_length.png, id=41, 433.62pt x 289.08pt>
+File: charts/ASTR_path_length.png Graphic file (type png)
+<use charts/ASTR_path_length.png>
+Package pdftex.def Info: charts/ASTR_path_length.png  used on input line 286.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ASTR_processed.png, id=42, 433.62pt x 289.08pt>
+File: charts/ASTR_processed.png Graphic file (type png)
+<use charts/ASTR_processed.png>
+Package pdftex.def Info: charts/ASTR_processed.png  used on input line 293.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ASTR_recursed.png, id=43, 433.62pt x 289.08pt>
+File: charts/ASTR_recursed.png Graphic file (type png)
+<use charts/ASTR_recursed.png>
+Package pdftex.def Info: charts/ASTR_recursed.png  used on input line 301.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ASTR_time.png, id=44, 433.62pt x 289.08pt>
+File: charts/ASTR_time.png Graphic file (type png)
+<use charts/ASTR_time.png>
+Package pdftex.def Info: charts/ASTR_time.png  used on input line 306.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+<charts/ASTR_visited.png, id=45, 433.62pt x 289.08pt>
+File: charts/ASTR_visited.png Graphic file (type png)
+<use charts/ASTR_visited.png>
+Package pdftex.def Info: charts/ASTR_visited.png  used on input line 311.
+(pdftex.def)             Requested size: 254.79262pt x 169.86319pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
+
+ <./charts/ALL_path_length.png> <./charts/ALL_processed.png> <./charts/ALL_recursed.png> <./charts/ALL_time.png> <./charts/ALL_visited.png>]
+<charts/BFS_path_length.png, id=56, 1055.142pt x 390.9807pt>
+File: charts/BFS_path_length.png Graphic file (type png)
+<use charts/BFS_path_length.png>
+Package pdftex.def Info: charts/BFS_path_length.png  used on input line 319.
+(pdftex.def)             Requested size: 566.20969pt x 209.80797pt.
+<charts/BFS_processed.png, id=57, 1071.22208pt x 390.9807pt>
+File: charts/BFS_processed.png Graphic file (type png)
+<use charts/BFS_processed.png>
+Package pdftex.def Info: charts/BFS_processed.png  used on input line 323.
+(pdftex.def)             Requested size: 566.20969pt x 206.66396pt.
+<charts/BFS_recursed.png, id=58, 1055.142pt x 390.9807pt>
+File: charts/BFS_recursed.png Graphic file (type png)
+<use charts/BFS_recursed.png>
+Package pdftex.def Info: charts/BFS_recursed.png  used on input line 327.
+(pdftex.def)             Requested size: 566.20969pt x 209.80797pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./charts/ASTR_path_length.png> <./charts/ASTR_processed.png> <./charts/ASTR_recursed.png> <./charts/ASTR_time.png> <./charts/ASTR_visited.png>]
+<charts/BFS_time.png, id=67, 1079.89447pt x 390.9807pt>
+File: charts/BFS_time.png Graphic file (type png)
+<use charts/BFS_time.png>
+Package pdftex.def Info: charts/BFS_time.png  used on input line 334.
+(pdftex.def)             Requested size: 566.20969pt x 204.99947pt.
+<charts/BFS_visited.png, id=68, 1071.0414pt x 390.9807pt>
+File: charts/BFS_visited.png Graphic file (type png)
+<use charts/BFS_visited.png>
+Package pdftex.def Info: charts/BFS_visited.png  used on input line 337.
+(pdftex.def)             Requested size: 566.20969pt x 206.69974pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./charts/BFS_path_length.png> <./charts/BFS_processed.png> <./charts/BFS_recursed.png>]
+<charts/DFS_path_length.png, id=75, 1079.17177pt x 390.9807pt>
+File: charts/DFS_path_length.png Graphic file (type png)
+<use charts/DFS_path_length.png>
+Package pdftex.def Info: charts/DFS_path_length.png  used on input line 343.
+(pdftex.def)             Requested size: 566.20969pt x 205.14265pt.
+<charts/DFS_processed.png, id=76, 1071.40276pt x 390.9807pt>
+File: charts/DFS_processed.png Graphic file (type png)
+<use charts/DFS_processed.png>
+Package pdftex.def Info: charts/DFS_processed.png  used on input line 347.
+(pdftex.def)             Requested size: 566.20969pt x 206.62816pt.
+<charts/DFS_recursed.png, id=77, 1079.17177pt x 390.9807pt>
+File: charts/DFS_recursed.png Graphic file (type png)
+<use charts/DFS_recursed.png>
+Package pdftex.def Info: charts/DFS_recursed.png  used on input line 351.
+(pdftex.def)             Requested size: 566.20969pt x 205.14265pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./charts/BFS_time.png> <./charts/BFS_visited.png>]
+<charts/DFS_time.png, id=83, 1079.89447pt x 390.9807pt>
+File: charts/DFS_time.png Graphic file (type png)
+<use charts/DFS_time.png>
+Package pdftex.def Info: charts/DFS_time.png  used on input line 358.
+(pdftex.def)             Requested size: 566.20969pt x 204.99947pt.
+<charts/DFS_visited.png, id=84, 1071.40276pt x 390.9807pt>
+File: charts/DFS_visited.png Graphic file (type png)
+<use charts/DFS_visited.png>
+Package pdftex.def Info: charts/DFS_visited.png  used on input line 361.
+(pdftex.def)             Requested size: 566.20969pt x 206.62816pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./charts/DFS_path_length.png> <./charts/DFS_processed.png> <./charts/DFS_recursed.png>] [12 <./charts/DFS_time.png> <./charts/DFS_visited.png>]
+Underfull \vbox (badness 3803) has occurred while \output is active []
+
+ [13
+
+]
+Overfull \hbox (6.91415pt too wide) in paragraph at lines 419--426
+\OT4/cmr/m/n/12 reszt¡(RDLU). Na wy-kre-sach czasu przetwarzania(rys.8[]), ilo-±ci odwiedzonych(rys.9[])
+ []
+
+
+Overfull \hbox (2.45038pt too wide) in paragraph at lines 419--426
+\OT4/cmr/m/n/12 rekursji(rys.12[]), gdzie po-rz¡dki id¡ce szybko w lewo jak LUDR,ULDR,LURD,UlDR
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+[]\OT4/cmr/m/sl/10.95 The Fi-fteen Puz-zle $\OT4/cmtt/m/n/10.95 http : / / www . math . ubc . ca / ~cass / courses / m308-[]02b /
+ []
+
+
+AED: lastpage setting LastPage
+[15] (./sprawozdanie.aux) ) 
+Here is how much of TeX's memory you used:
+ 6820 strings out of 492642
+ 97322 string characters out of 6135565
+ 180850 words of memory out of 5000000
+ 10568 multiletter control sequences out of 15000+600000
+ 15816 words of font info for 51 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,12n,39p,414b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/pl/plrm.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsl10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsl8.pfb></usr/share/texmf-dist/fonts/type1/public/pl/pltt10.pfb>
+Output written on sprawozdanie.pdf (15 pages, 3482062 bytes).
+PDF statistics:
+ 156 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+
